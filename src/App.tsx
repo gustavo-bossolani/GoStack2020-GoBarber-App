@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import AppProvider from './hooks';
 
-import Routes from './routes';
+import Routes from './routes/index';
 
 const App: React.FC = () => (
   <NavigationContainer>
