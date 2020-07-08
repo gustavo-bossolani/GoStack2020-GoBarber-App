@@ -59,8 +59,6 @@ const SignUp: React.FC = () => {
           abortEarly: false,
         });
 
-        console.log(data);
-
         // Realizando a criação de usuário
         await api.post('/users', data);
 
@@ -71,6 +69,8 @@ const SignUp: React.FC = () => {
 
         navigation.goBack();
       } catch (err) {
+        console.log(err);
+
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
           formRef.current?.setErrors(errors);
